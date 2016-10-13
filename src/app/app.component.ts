@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import {ElementLeftComponent} from './element-left/element-left.component'
+import {WeatherWidgetComponent} from './weather-widget/weather-widget.component'
+import {InfoComponent} from './info/info.component'
 
 @Component({
   selector: 'app-root',
