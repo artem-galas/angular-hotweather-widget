@@ -52,3 +52,12 @@ h1 {
   margin: 3em 0em 2em 0em;
   font-family: 'Quicksand', sans-serif;
 }
+.copy-right {
+  text-align: center;
+  padding: 0em 0em 2em 0em;
+}
+.copy-right p {
+  font-size: 1em;
+  color: #fff;
+  line-height: 1.6em;
+}
