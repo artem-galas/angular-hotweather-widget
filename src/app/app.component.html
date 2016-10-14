@@ -2,10 +2,10 @@
   Hot Weather Widget
 </h1>
 <div class="element">
-  <hw01-element-left></hw01-element-left>
+  <hw01-element-left (restoran)="restoran=$event"></hw01-element-left>
   <div class="element-right">
-    <hw01-weather-widget></hw01-weather-widget>
-    <hw01-info></hw01-info>
+    <hw01-weather-widget [weather]="restoran?.weather"></hw01-weather-widget>
+    <hw01-info [info]="restoran?.info"></hw01-info>
     <div class="clear"></div>
   </div>
   <div class="clear"></div>

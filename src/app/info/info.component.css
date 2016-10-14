@@ -24,8 +24,10 @@ span.w-line {
   color: #fff;
 }
 .teddy-text img {
-  border-radius: 70px;
+  border-radius: 100%;
   border: 3px solid #fff;
+  width: 100px;
+  height: 100px;
 }
 .teddy-follow {
   background: #f2f1ef;

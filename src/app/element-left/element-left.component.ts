@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Output, EventEmitter} from '@angular/core';
 import {VillageComponent} from '../village/village.component'
 
 @Component({
@@ -9,14 +9,16 @@ import {VillageComponent} from '../village/village.component'
 export class ElementLeftComponent {
 
   constructor() { }
-
-  public row:any;
   public imageHeader = 'assets/images/1.jpg';
 
-  public selected(e) {
-    console.info(e);
-    if (e.images[1].url) {
-      this.imageHeader = e.images[1].url;
+  @Output()
+  public restoran: EventEmitter<Object> = new EventEmitter();
+
+  public selected(res) {
+    if (res.images[1].url) {
+      this.imageHeader = res.images[1].url;
     }
+    this.restoran.emit(res);
+    console.log(res);
   }
 }

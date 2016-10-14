@@ -27,8 +27,10 @@ export class VillageComponent {
         water: '10',
         precipitation: 'cloud',
       },
-      followers: '2333',
-      following: '3222'
+      info: {
+        followers: '2333',
+        following: '3222'
+      }
     },
 
     {
@@ -48,8 +50,10 @@ export class VillageComponent {
         water: '15',
         precipitation: 'sun',
       },
-      followers: '8000',
-      following: '3000'
+      info: {
+        followers: '8000',
+        following: '3000'
+      }
     },
 
     {
@@ -69,8 +73,10 @@ export class VillageComponent {
         water: '4',
         precipitation: 'rain',
       },
-      followers: '5000',
-      following: '4000'
+      info: {
+        followers: '5000',
+        following: '4000'
+      }
     },
   ];
 
@@ -78,7 +84,7 @@ export class VillageComponent {
   public restoran: EventEmitter<Object> = new EventEmitter();
 
   public selectRestoran(restoran) {
+    restoran.info.image = restoran.images[0].url;
     this.restoran.emit(restoran);
   }
-
 }
