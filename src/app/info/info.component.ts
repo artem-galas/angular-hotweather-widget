@@ -9,6 +9,10 @@ export class InfoComponent {
 
   constructor() { }
 
+  public image = 'assets/images/b1.jpg';
+
   @Input()
   public info: Object;
+
+
 }

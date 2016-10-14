@@ -2,7 +2,7 @@
   <div class="teddy-text">
     <h4>Popularity</h4>
     <span class="w-line"> </span>
-    <img [src]="info?.image" alt="" class="img-responsive">
+    <img [src]="info ? info.image : image " alt="" class="img-responsive">
   </div>
   <div class="teddy-follow">
     <ul>
