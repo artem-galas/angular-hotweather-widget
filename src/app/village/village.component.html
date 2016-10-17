@@ -1,8 +1,8 @@
 <div class="activity-row" (click)="selectRestoran(restoran)" >
-  <div class="activity-desc">
-    <h5>{{restoran?.name}}</h5>
-    <p>{{restoran?.street}}</p>
-    <h6>{{restoran?.phone}}</h6>
+  <div class="activity-desc" *ngIf="restoran">
+    <h5>{{restoran.name}}</h5>
+    <p>{{restoran.street}}</p>
+    <h6>{{restoran.phone}}</h6>
   </div>
   <div class="activity-img">
     <ul>
