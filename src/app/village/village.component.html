@@ -1,50 +1,15 @@
-<div class="village">
-  <h3>Places Weather and like</h3>
-  <span class="line"> </span>
-  <div class="activity_box">
-    <div class="scrollbar">
-      <div class="activity-row" (click)="selectRestoran(restaurants[0])" >
-        <div class="activity-desc">
-          <h5>{{restaurants[0].name}}</h5>
-          <p>{{restaurants[0].street}}</p>
-          <h6>{{restaurants[0].phone}}</h6>
-        </div>
-        <div class="activity-img">
-          <ul>
-            <li><img [src]='restaurants[0].images[0].url' alt=""/></li>
-            <li><img [src]='restaurants[0].images[1].url' alt=""/></li>
-          </ul>
-        </div>
-        <div class="clear"> </div>
-      </div>
-      <div class="activity-row" (click)="selectRestoran(restaurants[1])">
-        <div class="activity-desc">
-          <h5>{{restaurants[1].name}}</h5>
-          <p>{{restaurants[1].street}}</p>
-          <h6>{{restaurants[1].phone}}</h6>
-        </div>
-        <div class="activity-img">
-          <ul>
-            <li><img [src]='restaurants[1].images[0].url' alt=""/></li>
-            <li><img [src]='restaurants[1].images[1].url' alt=""/></li>
-          </ul>
-        </div>
-        <div class="clear"> </div>
-      </div>
-      <div class="activity-row" (click)="selectRestoran(restaurants[2])">
-        <div class="activity-desc">
-          <h5>{{restaurants[2].name}}</h5>
-          <p>{{restaurants[2].street}}</p>
-          <h6>{{restaurants[2].phone}}</h6>
-        </div>
-        <div class="activity-img">
-          <ul>
-            <li><img [src]='restaurants[2].images[0].url' alt=""/></li>
-            <li><img [src]='restaurants[2].images[1].url' alt=""/></li>
-          </ul>
-        </div>
-        <div class="clear"> </div>
-      </div>
-    </div>
+<div class="activity-row" (click)="selectRestoran(restoran)" >
+  <div class="activity-desc">
+    <h5>{{restoran?.name}}</h5>
+    <p>{{restoran?.street}}</p>
+    <h6>{{restoran?.phone}}</h6>
   </div>
+  <div class="activity-img">
+    <ul>
+      <li *ngFor="let image of restoran?.images">
+        <img [src]="image?.url" alt=""/>
+      </li>
+    </ul>
+  </div>
+  <div class="clear"> </div>
 </div>

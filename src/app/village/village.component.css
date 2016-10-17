@@ -1,39 +1,3 @@
-.village {
-  background: #fff;
-  padding: 1.5em 1em;
-  border-radius: 0px 0px 5px 5px;
-}
-.village h3 {
-  text-align: center;
-  font-size: 0.95em;
-  color: #000;
-  font-weight: bold;
-  font-family: 'Roboto', sans-serif;
-}
-span.line {
-  background: url(assets/images/line.png)no-repeat;
-  width: 103px;
-  height: 2px;
-  display: block;
-  margin: 0.6em auto 0em;
-}
-span.w-line {
-  background: url(assets/images/w-line.png)no-repeat;
-  width: 103px;
-  height: 2px;
-  display: block;
-  margin:0.73em auto 0.72em;
-}
-.activity_box{
-  background: #fff;
-  min-height: 120px;
-}
-.scrollbar{
-  height:115px;
-  background:#fff;
-  overflow-y: scroll;
-  padding: 1em 1em 0em 1em;
-}
 .activity-row{
   margin-bottom:1em;
   cursor: pointer;

@@ -11,6 +11,19 @@
         <li class="anc-bor"><a href="#">Weather</a></li>
       </ul>
     </div>
-    <hw01-village (restoran)="selected($event)"></hw01-village>
+    <div class="village">
+      <h3>Places Weather and like</h3>
+      <span class="line"> </span>
+      <div class="activity_box">
+        <div class="scrollbar">
+          <hw01-village
+              *ngFor="let restoran of restaurants"
+              [restoran]="restoran"
+              (selectedRestoran)="selected($event)">
+          </hw01-village>
+          <div class="clear"> </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

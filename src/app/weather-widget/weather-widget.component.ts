@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import {IWeather} from "../shared/interfaces/weather.interface";
 
 @Component({
   selector: 'hw01-weather-widget',
@@ -10,6 +11,5 @@ export class WeatherWidgetComponent {
   constructor() { }
 
   @Input()
-  public weather:Object
-
+  public weather:IWeather
 }
