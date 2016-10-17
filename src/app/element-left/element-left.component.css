@@ -26,6 +26,13 @@
 .ele-strip ul li a{
   font-size:1em;
   color: #fff;
+  cursor: pointer;
+}
+.ele-strip ul li a:hover{
+  color: #cccccc;
+}
+.ele-strip ul li a.active{
+  color: black;
 }
 
 .village {

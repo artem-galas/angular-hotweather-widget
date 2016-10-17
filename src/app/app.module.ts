@@ -8,6 +8,7 @@ import { ElementLeftComponent } from './element-left/element-left.component';
 import { WeatherWidgetComponent } from './weather-widget/weather-widget.component';
 import { InfoComponent } from './info/info.component';
 import { VillageComponent } from './village/village.component';
+import { TypePipe } from './shared/pipes/type.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { VillageComponent } from './village/village.component';
     ElementLeftComponent,
     WeatherWidgetComponent,
     InfoComponent,
-    VillageComponent
+    VillageComponent,
+    TypePipe
   ],
   imports: [
     BrowserModule,

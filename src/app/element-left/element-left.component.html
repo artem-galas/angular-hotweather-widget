@@ -5,10 +5,9 @@
   <div class="element-left-bottom">
     <div class="ele-strip">
       <ul>
-        <li><a href="#">Hotel</a></li>
-        <li><a href="#">Spa</a></li>
-        <li><a href="#">Restaurant</a></li>
-        <li class="anc-bor"><a href="#">Weather</a></li>
+        <li><a [ngClass]="{'active': filter==='all'}" (click)="filter='all'">All</a></li>
+        <li><a [ngClass]="{'active': filter==='spa'}" (click)="filter='spa'">Spa</a></li>
+        <li><a [ngClass]="{'active': filter==='restaurant'}" (click)="filter='restaurant'">Restaurant</a></li>
       </ul>
     </div>
     <div class="village">
@@ -16,11 +15,30 @@
       <span class="line"> </span>
       <div class="activity_box">
         <div class="scrollbar">
-          <hw01-village
-              *ngFor="let restoran of restaurants"
-              [restoran]="restoran"
-              (selectedRestoran)="selected($event)">
-          </hw01-village>
+          <div class="spa" *ngIf="filter==='all'">
+            <hw01-village
+                *ngFor="let restoran of restaurants"
+                [restoran]="restoran"
+                (selectedRestoran)="selected($event)">
+            </hw01-village>
+          </div>
+
+          <div class="spa" *ngIf="filter==='spa'">
+            <hw01-village
+                *ngFor="let restoran of restaurants | type: 'spa'"
+                [restoran]="restoran"
+                (selectedRestoran)="selected($event)">
+            </hw01-village>
+          </div>
+
+          <div class="spa" *ngIf="filter==='restaurant'">
+            <hw01-village
+                *ngFor="let restoran of restaurants | type: 'restaurant'"
+                [restoran]="restoran"
+                (selectedRestoran)="selected($event)">
+            </hw01-village>
+          </div>
+
           <div class="clear"> </div>
         </div>
       </div>
