@@ -15,6 +15,7 @@ export class ElementLeftComponent {
   public restaurants:IRestoran[] = [
     {
       name: 'Bili Jean',
+      type: 'restaurant',
       street: 'Gudimenko 20',
       phone: '+1234567890',
       images: [
@@ -38,6 +39,7 @@ export class ElementLeftComponent {
 
     {
       name: 'Super puper',
+      type: 'restaurant',
       street: 'Glissenay 30',
       phone: '+0987654321',
       images: [
@@ -61,6 +63,7 @@ export class ElementLeftComponent {
 
     {
       name: 'Kozaks town',
+      type: 'restaurant',
       street: 'Soborniy ave 22',
       phone: '+3478906532',
       images: [
