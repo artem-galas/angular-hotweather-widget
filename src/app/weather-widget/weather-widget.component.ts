@@ -1,5 +1,7 @@
-import {Component, Input} from '@angular/core';
+import {Component} from '@angular/core';
 import {IWeather} from "../shared/interfaces/weather.interface";
+import {VillageService} from "../shared/services/village.service";
+import {IRestoran} from "../shared/interfaces/restoran.interface";
 
 @Component({
   selector: 'hw01-weather-widget',
@@ -8,8 +10,10 @@ import {IWeather} from "../shared/interfaces/weather.interface";
 })
 export class WeatherWidgetComponent {
 
-  constructor() { }
-
-  @Input()
-  public weather:IWeather
+  public weather: IWeather;
+  constructor(private _villageService: VillageService) {
+    _villageService.selectedRes.subscribe((res:IRestoran)=>{
+      this.weather = res.weather;
+    })
+  }
 }

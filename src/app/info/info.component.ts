@@ -1,5 +1,7 @@
-import {Component, Input} from '@angular/core';
+import {Component} from '@angular/core';
 import {IInfo} from "../shared/interfaces/info.weather";
+import {VillageService} from '../shared/services/village.service';
+import {IRestoran} from "../shared/interfaces/restoran.interface";
 
 @Component({
   selector: 'hw01-info',
@@ -7,11 +9,12 @@ import {IInfo} from "../shared/interfaces/info.weather";
   styleUrls: ['./info.component.css']
 })
 export class InfoComponent {
-
-  constructor() { }
-
+  public info: IInfo;
   public image = 'assets/images/b1.jpg';
 
-  @Input()
-  public info: IInfo
+  constructor(private _villageService: VillageService) {
+    _villageService.selectedRes.subscribe((res:IRestoran)=>{
+      this.info = res.info;
+    })
+  }
 }

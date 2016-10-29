@@ -27,7 +27,7 @@
           <hw01-village
               *ngFor="let restoran of restaurants | type: filter"
               [restoran]="restoran"
-              (selectedRestoran)="selected($event)">
+              (click)="selected(restoran)">
           </hw01-village>
           <div class="clear"> </div>
         </div>

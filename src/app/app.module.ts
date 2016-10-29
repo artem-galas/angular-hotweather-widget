@@ -9,6 +9,7 @@ import { WeatherWidgetComponent } from './weather-widget/weather-widget.componen
 import { InfoComponent } from './info/info.component';
 import { VillageComponent } from './village/village.component';
 import { TypePipe } from './shared/pipes/type.pipe';
+import {VillageService} from "./shared/services/village.service";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { TypePipe } from './shared/pipes/type.pipe';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [VillageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
