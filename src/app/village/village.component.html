@@ -1,0 +1,15 @@
+<div class="activity-row">
+  <div class="activity-desc" *ngIf="restoran">
+    <h5>{{restoran.name}}</h5>
+    <p>{{restoran.street}}</p>
+    <h6>{{restoran.phone}}</h6>
+  </div>
+  <div class="activity-img">
+    <ul>
+      <li *ngFor="let image of restoran?.images">
+        <img [src]="image?.url" alt=""/>
+      </li>
+    </ul>
+  </div>
+  <div class="clear"> </div>
+</div>

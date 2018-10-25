@@ -1,0 +1,37 @@
+<div class="element-left">
+  <div class="element-bg-img">
+    <img [src]="imageHeader" alt="" class="img-responsive">
+  </div>
+  <div class="element-left-bottom">
+    <div class="ele-strip">
+      <ul>
+        <li>
+          <a [ngClass]="{'active': filter==='all'}"
+            (click)="filter='all'">All</a>
+        </li>
+        <li>
+          <a [ngClass]="{'active': filter==='spa'}"
+            (click)="filter='spa'">Spa</a>
+        </li>
+        <li>
+          <a [ngClass]="{'active': filter==='restaurant'}"
+            (click)="filter='restaurant'">Restaurant</a>
+        </li>
+      </ul>
+    </div>
+    <div class="village">
+      <h3>Places Weather and like</h3>
+      <span class="line"> </span>
+      <div class="activity_box">
+        <div class="scrollbar">
+          <app-village
+            *ngFor="let restoran of restaurants | type: filter"
+            [restoran]="restoran"
+            (click)="selected(restoran)">
+          </app-village>
+          <div class="clear"> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
